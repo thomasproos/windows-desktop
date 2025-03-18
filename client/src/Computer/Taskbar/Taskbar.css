@@ -1,7 +1,7 @@
 /* Taskbar CSS */
 #taskbar {
     background-color: rgb(191, 192, 196);
-    height: 3.8%;
+    height: 36px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -60,4 +60,14 @@
 
 .taskbar-time-text {
     margin-top: 3px;
+}
+
+/* Taskbar Apps */
+.taskbar-apps-slot-text {
+    font-family: 'RetroFont';
+    font-size: 15px;
+}
+
+.taskbar-apps-The Internet {
+    background-image: url('../../Assets/internet-explore-icon.png');
 }

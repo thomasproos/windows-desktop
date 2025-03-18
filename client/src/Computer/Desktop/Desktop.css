@@ -1,5 +1,12 @@
 /* Desktop CSS */
 #desktop {
     background-color: rgb(0, 129, 129);
-    height: 96.2%;
+    height: calc(100% - 36px);
+}
+
+#desktop-application-area {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
 }

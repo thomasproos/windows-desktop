@@ -7,12 +7,26 @@ import ExploreBar from "./ExploreBar/ExploreBar";
 // Import Assets
 import StartIcon from '../../Assets/start-icon.png';
 
-export default function Taskbar({ active, setActive }) {
+export default function Taskbar({ active, setActive, runningApps, setRunningApps }) {
   // Get Date information
   const date = new Date(); 
-  const hour = date.getHours();
-  const minutes = date.getMinutes();
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let indicator = "AM";
 
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  if (hour >= 12) {
+    indicator = "PM";
+
+    if (hour !== 12) {
+      hour -= 12;
+    }
+  }
+
+  // Return Component
   return(
     <section id="taskbar" className="windows95-border-no-black-white-top">
       {/* Taskbar */}
@@ -38,20 +52,21 @@ export default function Taskbar({ active, setActive }) {
 
       {/* Taskbar Apps */}
       <section id="taskbar-applications">
-
+        {runningApps.map((item, index) => {
+          return(
+            <div className="taskbar-apps-slot" key={index}>
+              <div id={"taskbar-apps-" + item} />
+              <div className="taskbar-apps-slot-text">{item}</div>
+            </div>
+          );
+        })}
       </section>
 
       {/* Taskbar Time */}
       <div id="taskbar-time" className="windows95-border-light">
-        {hour >= 12 && hour < 24 ?
-          <div className="taskbar-time-text">{hour - 12}:{minutes} PM</div>
-          :
-          <>{minutes < 10 ?
-            <div className="taskbar-time-text">{hour}:0{minutes} AM</div>
-            :
-            <div className="taskbar-time-text">{hour}:{minutes} AM</div>
-          }</>
-        }
+        <div className="taskbar-time-text">
+          {hour}:{minutes} {indicator}
+        </div>
       </div>
     </section>
   );
