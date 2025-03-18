@@ -3,6 +3,8 @@
     background-color: rgb(191, 192, 196);
     height: 3.8%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Taskbar Start */
@@ -17,6 +19,7 @@
     margin: 2.5px;
     margin-left: 4px;
     padding: 2px;
+    position: relative;
 }
 
 #taskbar-start-icon {
@@ -31,10 +34,6 @@
     font-size: 15px;
 }
 
-#taskbar-start-explore {
-    position: absolute;
-}
-
 #taskbar-start-dotted-border {
     display: flex;
     flex-direction: row;
@@ -42,4 +41,23 @@
     justify-content: center;
     gap: 3px;
     border: black 1px dotted;
+}
+
+/* Time */
+#taskbar-time {
+    width: fit-content;
+    height: 26px;
+    margin: 2.5px;
+    margin-right: 5px;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    font-family: "RetroFont";
+    font-size: 15px;
+}
+
+.taskbar-time-text {
+    margin-top: 3px;
 }
