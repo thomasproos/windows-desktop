@@ -11,12 +11,14 @@ import Help from '../../../Assets/help-icon.png';
 import Documents from '../../../Assets/documents-icon.png';
 import ShutDown from '../../../Assets/shut-down-icon.png';
 
+// Import Components
+import ExploreButton from './ExploreButton/ExploreButton';
+
+// Import Dependencies
+import { useState } from "react";
+
 export default function ExploreBar({ active, setActive }) {
-  // Handle explore navigation click
-  const onButtonClick = (event) => {
-    event.stopPropagation();
-    console.log("hi")
-  }
+  const [navigation, setNavigation] = useState("none");
 
   return(
     <section id="explore-bar" className="windows95-border-border-only">
@@ -29,67 +31,29 @@ export default function ExploreBar({ active, setActive }) {
       <div id="explore-bar-buttons">
 
         {/* Programs */}
-        <div className="explore-bar-button" id="explore-button-programs" onMouseDown={(event) => {onButtonClick(event)}}>
-          <img src={Programs} alt="Programs Icon" className="explore-bar-button-icon explore-bar-button-icon-smaller"/>
-          <div className="explore-bar-button-text">
-            <span>P</span>rograms
-          </div>
-          <div className="search-bar-button-arrow"/>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<><span>P</span>rograms</>} image={Programs} arrow={true} id="programs" size="large"/>
 
         {/* Documents */}
-        <div className="explore-bar-button" id="explore-button-documents" onClick={(event) => {onButtonClick(event)}}>
-          <img src={Documents} alt="Documents Icon" className="explore-bar-button-icon"/>
-          <div className="explore-bar-button-text">
-            <span>D</span>ocuments
-          </div>
-          <div className="search-bar-button-arrow"/>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<><span>D</span>ocuments</>} image={Documents} arrow={true} id="documents" size="large"/>
 
         {/* Settings */}
-        <div className="explore-bar-button" id="explore-button-settings" onClick={(event) => {onButtonClick(event)}}>
-          <img src={Settings} alt="Settings Icon" className="explore-bar-button-icon"/>
-          <div className="explore-bar-button-text">
-            <span>S</span>ettings
-          </div>
-          <div className="search-bar-button-arrow"/>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<><span>S</span>ettings</>} image={Settings} arrow={true} id="settings" size="large"/>
 
         {/* Find */}
-        <div className="explore-bar-button" id="explore-button-find" onClick={(event) => {onButtonClick(event)}}>
-          <img src={Search} alt="Find Icon" className="explore-bar-button-icon explore-bar-button-icon-smaller"/>
-          <div className="explore-bar-button-text">
-            <span>F</span>ind
-          </div>
-          <div className="search-bar-button-arrow"/>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<><span>F</span>ind</>} image={Search} arrow={true} id="find" size="large"/>
 
         {/* Help */}
-        <div className="explore-bar-button" id="explore-button-help" onClick={(event) => {onButtonClick(event)}}>
-          <img src={Help} alt="Help Icon" className="explore-bar-button-icon"/>
-          <div className="explore-bar-button-text">
-            <span>H</span>elp
-          </div>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<><span>H</span>elp</>} image={Help} arrow={false} id="help" size="large"/>
 
         {/* Run */}
-        <div className="explore-bar-button" id="explore-button-run" onClick={(event) => {onButtonClick(event)}}>
-          <img src={Run} alt="Run Icon" className="explore-bar-button-icon"/>
-          <div className="explore-bar-button-text">
-            <span>R</span>un...
-          </div>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<><span>R</span>un...</>} image={Run} arrow={false} id="run" size="large"/>
 
         {/* Divider */}
         <div id="search-bar-divider" />
 
         {/* Shut Down */}
-        <div className="explore-bar-button" id="explore-button-shutdown" onClick={(event) => {onButtonClick(event)}}>
-          <img src={ShutDown} alt="ShutDown Icon" className="explore-bar-button-icon"/>
-          <div className="explore-bar-button-text">
-            Sh<span>u</span>t Down...
-          </div>
-        </div>
+        <ExploreButton navigation={navigation} setNavigation={setNavigation} text={<>Sh<span>u</span>t Down...</>} image={ShutDown} arrow={false} id="shutdown" size="large"/>
+        
       </div>
     </section>
   );

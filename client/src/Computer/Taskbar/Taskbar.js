@@ -46,7 +46,11 @@ export default function Taskbar({ active, setActive }) {
         {hour >= 12 && hour < 24 ?
           <div className="taskbar-time-text">{hour - 12}:{minutes} PM</div>
           :
-          <div className="taskbar-time-text">{hour}:{minutes} AM</div>
+          <>{minutes < 10 ?
+            <div className="taskbar-time-text">{hour}:0{minutes} AM</div>
+            :
+            <div className="taskbar-time-text">{hour}:{minutes} AM</div>
+          }</>
         }
       </div>
     </section>
