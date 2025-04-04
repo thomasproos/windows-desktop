@@ -63,11 +63,20 @@
 }
 
 /* Taskbar Apps */
+.taskbar-apps-slot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: calc(100% - 8px);
+    margin: 3px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .taskbar-apps-slot-text {
     font-family: 'RetroFont';
     font-size: 15px;
-}
-
-.taskbar-apps-The Internet {
-    background-image: url('../../Assets/internet-explore-icon.png');
+    font-weight: bold;
 }

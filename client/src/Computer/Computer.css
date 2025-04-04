@@ -54,6 +54,33 @@ img {
     box-shadow: -0.2px -0.25px 1px rgb(0, 0, 0);
 }
 
+.windows95-border-dark {
+    box-sizing: border-box;
+    background-color: rgb(211, 211, 211);
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+    box-shadow: -1px -1px 1px rgb(0, 0, 0);
+    background-image: radial-gradient(
+        circle at center,
+        rgb(104, 104, 104) 0.8px,
+        transparent 0
+    );
+    background-size: 2.5px 2.5px;
+    background-repeat: round;
+}
+
+.windows95-border-outwards {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+    border-left: white 2px solid;
+    border-bottom: rgb(77, 77, 77) 1px solid;
+    border-right: rgb(77, 77, 77) 1px solid;
+    box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
 .windows95-inverted-button {
     box-sizing: border-box;
     border-top: white 2px solid;

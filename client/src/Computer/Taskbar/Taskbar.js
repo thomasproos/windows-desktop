@@ -26,6 +26,11 @@ export default function Taskbar({ active, setActive, runningApps, setRunningApps
     }
   }
 
+  // Handle clicking a window
+  const handleClick = (item) => {
+    setActive(item);
+  };
+
   // Return Component
   return(
     <section id="taskbar" className="windows95-border-no-black-white-top">
@@ -54,8 +59,8 @@ export default function Taskbar({ active, setActive, runningApps, setRunningApps
       <section id="taskbar-applications">
         {runningApps.map((item, index) => {
           return(
-            <div className="taskbar-apps-slot" key={index}>
-              <div id={"taskbar-apps-" + item} />
+            <div className={"taskbar-apps-slot " + (active === item ? "windows95-border-dark" : "windows95-border-outwards")} key={index} onMouseDown={() => {handleClick(item)}}>
+              <div id="taskbar-apps-slot-icon" />
               <div className="taskbar-apps-slot-text">{item}</div>
             </div>
           );
