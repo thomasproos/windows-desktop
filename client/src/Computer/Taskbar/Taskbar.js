@@ -28,7 +28,7 @@ export default function Taskbar({ active, setActive, runningApps, setRunningApps
 
   // Handle clicking a window
   const handleClick = (item) => {
-    setActive(item);
+    setActive(item.name);
   };
 
   // Return Component
@@ -59,9 +59,9 @@ export default function Taskbar({ active, setActive, runningApps, setRunningApps
       <section id="taskbar-applications">
         {runningApps.map((item, index) => {
           return(
-            <div className={"taskbar-apps-slot " + (active === item ? "windows95-border-dark" : "windows95-border-outwards")} key={index} onMouseDown={() => {handleClick(item)}}>
-              <div id="taskbar-apps-slot-icon" />
-              <div className="taskbar-apps-slot-text">{item}</div>
+            <div className={"taskbar-apps-slot " + (active === item.name ? "windows95-border-dark" : "windows95-border-outwards")} key={index} onMouseDown={() => {handleClick(item)}}>
+              <div className={`taskbar-apps-slot-icon ${item.name}-icon`} />
+              <div className="taskbar-apps-slot-text">{item.display}</div>
             </div>
           );
         })}

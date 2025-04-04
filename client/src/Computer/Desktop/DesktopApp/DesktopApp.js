@@ -1,7 +1,7 @@
 // Import CSS
 import "./DesktopApp.css";
 
-export default function DesktopApp({ active, setActive, text, image, id, activeApp, setActiveApp, runningApps, setRunningApps }) {
+export default function DesktopApp({ active, setActive, text, name, image, id, activeApp, setActiveApp, runningApps, setRunningApps }) {
   // Handle app click
   const handleAppClick = (event) => {
     event.stopPropagation();
@@ -15,7 +15,16 @@ export default function DesktopApp({ active, setActive, text, image, id, activeA
     // Check if the app is already running
     if (!runningApps.includes(text)) {
       const appList = runningApps;
-      appList.push(text);
+
+      // Add object to the list
+      appList.unshift({
+        display: text,
+        name: name,
+        id: id
+      });
+
+      console.log(appList);
+
       setRunningApps(appList);
     }
   };

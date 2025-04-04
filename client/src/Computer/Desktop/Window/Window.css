@@ -1,0 +1,22 @@
+/* Window CSS */
+.window {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    background-color: rgb(192, 192, 192);
+    font-family: 'RetroFont';
+    font-size: 14px;
+
+    /* Temporary */
+    margin: 300px;
+    top: 0; 
+}
+
+#window-header {
+    background-color: rgb(2, 1, 132);
+    color: white;
+    padding: 3px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    box-sizing: border-box;
+}
