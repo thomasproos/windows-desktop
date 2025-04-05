@@ -31,7 +31,7 @@ export default function Desktop({ active, setActive, runningApps, setRunningApps
       {/* Windows */}
       {runningApps.map((application, index) => {
         return(
-          <Window application={application} index={index}/>
+          <Window application={application} key={index}/>
         );
       })}
     </section>

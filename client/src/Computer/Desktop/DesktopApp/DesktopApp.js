@@ -23,8 +23,6 @@ export default function DesktopApp({ active, setActive, text, name, image, id, a
         id: id
       });
 
-      console.log(appList);
-
       setRunningApps(appList);
     }
   };
