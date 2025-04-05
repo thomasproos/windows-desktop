@@ -10,10 +10,18 @@ export default function DesktopApp({ active, setActive, text, name, image, id, a
 
   // Handle Opening the App
   const handleOpenApp = () => {
-    setActive("internet");
+    setActive(name);
 
     // Check if the app is already running
-    if (!runningApps.includes(text)) {
+    let running = false;
+    runningApps.forEach((app) => {
+      if (app.name === name) {
+        running = true;
+      }
+    });
+
+    // If not running add the app to the list
+    if (!running) {
       const appList = runningApps;
 
       // Add object to the list

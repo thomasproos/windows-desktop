@@ -136,8 +136,3 @@ img {
     font-family: 'RetroFontBold';
     src: url('../Fonts/ms_sans_serif_bold.ttf'); 
 }
-
-@font-face {
-    font-family: 'RetroFont2';
-    src: url(../Fonts/Windows\ Regular.ttf);
-}
