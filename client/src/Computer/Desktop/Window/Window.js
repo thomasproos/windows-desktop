@@ -50,6 +50,7 @@ export default function Window({ application, runningApps, setRunningApps, activ
 
   // Set the event listeners
   useEffect(() => {
+    // Set event listener on parent
     if (desktopRef.current) {
       desktopRef.current.addEventListener('mousemove', handleMouseMove);
       desktopRef.current.addEventListener('mouseup', () => {
