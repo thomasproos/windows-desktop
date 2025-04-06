@@ -1,9 +1,6 @@
 // Import CSS
 import "./Desktop.css";
 
-// Import Assets
-import InternetExplore from '../../Assets/internet-icon.png';
-
 // Import Components
 import DesktopApp from "./DesktopApp/DesktopApp";
 import Window from "./Window/Window";
@@ -11,7 +8,7 @@ import Window from "./Window/Window";
 // Import Dependencies
 import { useRef, useState } from "react";
 
-export default function Desktop({ active, setActive, runningApps, setRunningApps }) {
+export default function Desktop({ active, setActive, runningApps, setRunningApps, applicationList }) {
   const [activeApp, setActiveApp] = useState([null,null]);
   const desktopRef = useRef(null);
 
@@ -25,8 +22,12 @@ export default function Desktop({ active, setActive, runningApps, setRunningApps
     <section ref={desktopRef} id="desktop" onMouseDown={handleClearActives}>
       <section id="desktop-application-area">
         {/* Applications */}
-        <DesktopApp active={active} setActive={setActive} text="The Internet" name="internet" image={InternetExplore} id={[0,0]} 
-          activeApp={activeApp} setActiveApp={setActiveApp} setRunningApps={setRunningApps} runningApps={runningApps}/>
+        {applicationList.map((application, index) => {
+          return(
+            <DesktopApp setActive={setActive} text={application.display} name={application.name} id={application.position} 
+              activeApp={activeApp} setActiveApp={setActiveApp} setRunningApps={setRunningApps} runningApps={runningApps} key={index}/>
+          );
+        })}
 
         {/* Windows */}
         {runningApps.map((application, index) => {

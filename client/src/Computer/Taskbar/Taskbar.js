@@ -60,7 +60,7 @@ export default function Taskbar({ active, setActive, runningApps, setRunningApps
         {runningApps.map((item, index) => {
           return(
             <div className={"taskbar-apps-slot " + (active === item.name ? "windows95-border-dark" : "windows95-border-outwards")} key={index} onMouseDown={() => {handleClick(item)}}>
-              <div className={`taskbar-apps-slot-icon ${item.name}-icon`} />
+              <div className={`taskbar-apps-slot-icon desktop-app-icon-${item.name}`} />
               <div className="taskbar-apps-slot-text">{item.display}</div>
             </div>
           );

@@ -17,7 +17,7 @@
     justify-content: space-between;
     font-size: 15px;
     font-family: 'RetroFont';
-    text-shadow: 0.02em 0 white;
+    text-shadow: 0.1px 0 white;
 }
 
 .window-inactive {
@@ -27,7 +27,7 @@
 
 .window-header-name {
     width: fit-content;
-    padding-left: 2px;
+    padding-left: 4px;
     padding-top: 3px;
     letter-spacing: 0.8px;
     line-height: 16px;
@@ -41,6 +41,7 @@
 .window-header-icon {
     height: 20px;
     width: 20px;
+    filter: drop-shadow(1.25px 1.25px 0px black);
     background-size: contain;
     background-position: center;
 }

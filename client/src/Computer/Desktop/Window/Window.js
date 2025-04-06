@@ -102,14 +102,15 @@ export default function Window({ application, runningApps, setRunningApps, activ
   }, [active, setMinimized, minimized, application]);
 
   return(
-    <section ref={windowRef} className={"window windows95-border-border-only " + 
+    <section ref={windowRef} style={{ zIndex: (active === application.name ? 3 : 1) }} 
+      className={"window windows95-border-border-only " + 
       (fullscreen ? "window-fullscreen " : "window-smallscreen ") + 
       (minimized ? "window-minimize " : "")} onMouseDown={handleWindowClick} onMouseMove={isDragging ? handleMouseMove : null}>
 
       {/* Header */}
       <div className={"window-header " + (active !== application.name ? "window-inactive" : "")} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
         <div id="window-header-textbox">
-          <div className={`window-header-icon ${application.name}-icon`} />
+          <div className={`window-header-icon desktop-app-icon-${application.name}`} />
           <div className="window-header-name">{application.display}</div>
         </div>
 

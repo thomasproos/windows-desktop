@@ -64,36 +64,45 @@
 }
 
 /* Taskbar Apps */
+#taskbar-applications {
+    display: flex;
+    flex-direction: row;
+}
+
 .taskbar-apps-slot {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-align: center;
     height: calc(100% - 8px);
     margin: 3px;
     box-sizing: border-box;
-    padding-left: 5px;
+    padding-left: 3px;
     padding-right: 5px;
-    justify-content: center;
     gap: 4px;
+    width: 175px;
+    text-align: left;
 }
 
 .taskbar-apps-slot-text {
     margin-top: 2px;
     font-family: 'RetroFont';
+    max-width: calc(100% - 24px);
     font-size: 15px;
-    font-weight: bold;
     letter-spacing: 0.4px;
+    text-shadow: 0.1px 0 black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Icon List */
 .taskbar-apps-slot-icon {
     height: 20px;
     width: 20px;
+    margin-top: -1px;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-}
-
-.internet-icon {
-    background-image: url('../../Assets/internet-icon.png');
+    filter: drop-shadow(1px 1px 0px black);
 }

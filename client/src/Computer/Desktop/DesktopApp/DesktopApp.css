@@ -7,10 +7,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 5px;
+    margin-bottom: 30px;
 }
 
 .desktop-app-icon {
-    height: 55px;
+    height: 43px;
+    width: 43px;
+    background-position: center;
+    background-size: contain;
+    filter: drop-shadow(2px 2px 0px black);
 }
 
 .desktop-app-active .desktop-app-icon {
@@ -28,7 +34,20 @@
     font-size: 15px;
     color: white;
     padding: 1px;
-    padding-top: 2px;
+    padding-top: 5px;
     box-sizing: border-box;
     border: 1px solid transparent;
+}
+
+/* Application Backgrounds */
+.desktop-app-icon-internet {
+    background-image: url('../../../Assets/internet-icon.png');
+}
+
+.desktop-app-icon-computer {
+    background-image: url('../../../Assets/computer-icon.png');
+}
+
+.desktop-app-icon-recycle {
+    background-image: url('../../../Assets/recycle-icon.png');
 }
