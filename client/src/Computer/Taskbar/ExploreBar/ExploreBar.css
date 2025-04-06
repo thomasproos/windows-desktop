@@ -1,0 +1,42 @@
+/* Explore Bar CSS */
+#explore-bar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 300px;
+    top: -302px;
+    left: 0;
+    background-color: rgb(191, 192, 196);
+    cursor: auto;
+}
+
+#explore-bar-icon-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30px;
+    background-color: rgb(121, 126, 122);
+}
+
+#explore-bar-icon {
+    margin-top: auto;
+    width: 25px;
+    margin-left: 3px;
+}
+
+#explore-bar-buttons {
+    width: calc(100% - 30px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#search-bar-divider {
+    width: 100%;
+    height: 2px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+}

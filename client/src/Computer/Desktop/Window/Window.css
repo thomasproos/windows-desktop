@@ -1,0 +1,79 @@
+/* Window CSS */
+.window {
+    /* width: fit-content;
+    height: fit-content; */
+    background-color: rgb(192, 192, 192);
+    padding: 2px;
+    color: rgb(192, 192, 192);
+}
+
+.window-header {
+    background-color: rgb(2, 1, 132);
+    color: white;
+    padding: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: 'RetroFont';
+    text-shadow: 0.02em 0 white;
+}
+
+.window-inactive {
+    background-color: rgb(128, 128, 128);
+    color: rgb(187, 189, 188);
+}
+
+.window-header-name {
+    width: fit-content;
+    padding-left: 2px;
+    padding-top: 3px;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+}
+
+#window-header-textbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.window-header-icon {
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-position: center;
+}
+
+#window-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.window-content {
+    margin: 5px;
+}
+
+.window-button {
+    height: 17px;
+    background-color: rgb(192, 192, 192);
+}
+
+/* Window Status */
+.window-fullscreen {
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    position: absolute;
+    top: 5px;
+}
+
+.window-smallscreen {
+    height: 300px;
+    width: 500px;
+    position: absolute;
+}
+
+.window-minimize {
+    display: none;
+}

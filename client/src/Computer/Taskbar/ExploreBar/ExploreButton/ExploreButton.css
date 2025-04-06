@@ -1,0 +1,81 @@
+/* explore Button CSS */
+.explore-button-large {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+    position: relative;
+    color: black;
+}
+
+.explore-button-small {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 28px;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+    position: relative;
+    color: black;
+}
+
+.explore-button-text-large {
+    font-size: 14px;
+    font-family: 'RetroFont';
+}
+
+.explore-button-text-small {
+    font-size: 13px;
+    margin-top: 2px;
+    font-family: 'RetroFont';
+}
+
+.explore-button-large:hover, .explore-button-small:hover {
+    background-color: rgb(2, 1, 132);
+    color: white;
+}
+
+.explore-button-arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    float: right;
+    margin-left: auto;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.explore-button-large:hover .explore-button-arrow, .explore-button-small:hover .explore-button-arrow {
+    border-left: 5px solid white;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.explore-button-icon-large {
+    height: 30px;
+}
+
+.explore-button-icon-small {
+    height: 20px;
+}
+
+/* Program Navigation */
+#explore-bar-program-navigation {
+    height: fit-content;
+    width: 166px;
+    position: absolute;
+    background-color: rgb(191, 192, 196);
+    right: -158px;
+    top: -2px;
+    z-index: 5;
+}

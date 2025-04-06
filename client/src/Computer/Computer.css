@@ -1,0 +1,138 @@
+/* Desktop CSS */
+#computer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* No Text Highlighting */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currentlysupported by Chrome, Edge, Opera and Firefox */
+}
+
+img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.windows95-border-no-black-white-top {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+}
+
+.windows95-border-all {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+    border-left: white 2px solid;
+    box-shadow: 10px 5px 5px black;
+}
+
+.windows95-border-border-only {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+    border-left: white 2px solid;
+    border-bottom: black 2px solid;
+    border-right: black 2px solid;
+}
+
+.windows95-border-light {
+    box-sizing: border-box;
+    background-color: rgb(211, 211, 211);
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    border-top: rgb(77, 77, 77) 1px solid;
+    border-left: rgb(77, 77, 77) 1px solid;
+    box-shadow: -0.2px -0.25px 1px rgb(0, 0, 0);
+}
+
+.windows95-border-dark {
+    box-sizing: border-box;
+    background-color: rgb(211, 211, 211);
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+    box-shadow: -1px -1px 1px rgb(0, 0, 0);
+    background-image: radial-gradient(
+        circle at center,
+        rgb(104, 104, 104) 0.8px,
+        transparent 0
+    );
+    background-size: 2.5px 2.5px;
+    background-repeat: round;
+}
+
+.windows95-border-outwards {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+    border-left: white 2px solid;
+    border-bottom: rgb(77, 77, 77) 1px solid;
+    border-right: rgb(77, 77, 77) 1px solid;
+    box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.windows95-inverted-button-window {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+    border-left: white 2px solid;
+    border-bottom: rgb(77, 77, 77) 1px solid;
+    border-right: rgb(77, 77, 77) 1px solid;
+    box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.windows95-inverted-button-window:active {
+    box-sizing: border-box;
+    background-color: rgb(211, 211, 211);
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    border-top: rgb(77, 77, 77) 1px solid;
+    border-left: rgb(77, 77, 77) 1px solid;
+    box-shadow: -1.5px -1.5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.windows95-inverted-button {
+    box-sizing: border-box;
+    border-top: white 2px solid;
+    border-left: white 2px solid;
+    border-bottom: rgb(77, 77, 77) 1px solid;
+    border-right: rgb(77, 77, 77) 1px solid;
+    box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.windows95-inverted-button-active {
+    box-sizing: border-box;
+    background-color: rgb(211, 211, 211);
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    border-top: rgb(77, 77, 77) 1px solid;
+    border-left: rgb(77, 77, 77) 1px solid;
+    box-shadow: -1.5px -1.5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.windows95-inverted-button-active:active {
+    background-color: rgb(185, 185, 185);
+}
+
+@font-face {
+    font-family: 'RetroFont';
+    src: url('../Fonts/ms_sans_serif.ttf'); 
+}
+
+@font-face {
+    font-family: 'RetroFontBold';
+    src: url('../Fonts/ms_sans_serif_bold.ttf'); 
+}
